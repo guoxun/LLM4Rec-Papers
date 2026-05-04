@@ -18,9 +18,25 @@ OneRec 第一版（arXiv:2502.18965）证明了端到端生成式推荐的可行
 
 ## 核心改进
 
-### 架构升级：Encoder-Decoder → Decoder-Only
+### 架构升级：Encoder-Decoder → Lazy Decoder-Only
 
-OneRec-V2 将模型架构从 Encoder-Decoder 升级为 **Decoder-Only** 结构，更贴近主流 LLM 技术栈，便于与 LLM 社区的推理增强技术（如 Test-Time Scaling）对接。
+OneRec-V2 提出 **Lazy Decoder-Only 架构**，彻底简化了 v1 的 Encoder-Decoder 设计：
+
+**Lazy Decoder 的核心思路**：
+- 移除独立的 Encoder 组件；
+- 简化 Cross-Attention 机制（消除 K/V 投影层）；
+- 用单一的 Decoder-Only 结构处理用户历史序列和生成任务。
+
+**Lazy Decoder 的效果**（与 v1 相比）：
+
+| 指标 | OneRec v1 (Enc-Dec) | OneRec-V2 (Lazy Dec-Only) |
+|------|---------------------|--------------------------|
+| 计算量 | 基线 | **减少 94%** |
+| 实际训练资源 | 基线 | **减少 90%** |
+| 可支持参数量 | 0.5B | **8B（16× 增长）** |
+| MFU | 23.7% | 更高（资源节省带来空间）|
+
+**为什么叫"Lazy"**：Decoder 以"懒惰"的方式处理历史序列——不再用专门的 Encoder 压缩，而是直接将历史行为序列拼入 Decoder 的上下文中，简洁高效。
 
 ### RL 强化：ECPO（Early-Clipped GRPO）
 
