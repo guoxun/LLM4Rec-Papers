@@ -249,9 +249,9 @@ RankMixer（抖音）的 Scaling：
 
 ### 如果你只有 30 分钟
 
-1. 读 [OneRec Technical Report](one-series/OneRec_TechReport.md) 的"核心发现"部分
-2. 看 [RankMixer](one-series/RankMixer.md) 的"两大障碍"和"在线结果"
-3. 了解 [QARM](one-series/QARM.md) 的"核心问题"——理解为什么多模态推荐不那么简单
+1. 读 [OneRec Technical Report](llm4rec/OneRec_TechReport.md) 的"核心发现"部分
+2. 看 [RankMixer](llm4rec/RankMixer.md) 的"两大障碍"和"在线结果"
+3. 了解 [QARM](llm4rec/QARM.md) 的"核心问题"——理解为什么多模态推荐不那么简单
 
 ### 如果你想深入生成式推荐
 
