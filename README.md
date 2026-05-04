@@ -280,5 +280,5 @@ RankMixer（抖音）的 Scaling：
 
 - 论文解读以 Markdown 格式存档，参考 RSPapers 体系；
 - 内容聚焦快手 One系列 + 相关工业大厂顶级工作；
-- 欢迎补充 PR 或在 [Issue](https://github.com/guoxun/OneRec-Papers/issues) 讨论；
+- 欢迎补充 PR 或在 [Issue](https://github.com/guoxun/LLM4Rec-Papers/issues) 讨论；
 - 如有引用或转载，请注明原始来源。
