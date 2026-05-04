@@ -1,6 +1,6 @@
 # LLM4Rec 必读论文解读：One系列 & 工业精排
 
-快手 **One系列**端到端生成式推荐 + 相关工业推荐论文解读，同步自知乎专栏 [@郭珣](https://www.zhihu.com/people/guoxun)。
+快手 **One系列**端到端生成式推荐 + 相关工业推荐论文解读，同步自知乎专栏 [@郭珣](https://www.zhihu.com/people/guo-xun-16)。
 
 ---
 
